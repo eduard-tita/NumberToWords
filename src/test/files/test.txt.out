@@ -1,0 +1,10 @@
+0 : Zero
+-3 : Minus three
+17 : Seventeen
+109 : One hundred and nine
+245 : Two hundred and forty five
+5,002 : Five thousand and two
+234,019 : Two hundred and thirty four thousand and nineteen
+-1,000,013 : Minus one million and thirteen
+coffee : Invalid number
+1000000000000000000000000000000000000000000000000000000 : Number too large

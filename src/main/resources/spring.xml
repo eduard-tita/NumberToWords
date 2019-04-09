@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="numberValidator" class="ca.et.validation.impl.IntegerNumberValidator"/>
+
+    <bean id="threeDigitTransformer" class="ca.et.processing.impl.EnglishThreeDigitTransformer"/>
+
+    <bean id="numberToWordsTransformer" class="ca.et.processing.impl.EnglishNumberToWordsTransformer">
+        <constructor-arg name="threeDigitTransformer" ref="threeDigitTransformer"/>
+    </bean>
+
+    <bean id="numberToWordsFileProcessor" class="ca.et.processing.impl.EnglishNumberToWordsFileProcessor">
+        <constructor-arg name="numberValidator" ref="numberValidator"/>
+        <constructor-arg name="numberToWordsTransformer" ref="numberToWordsTransformer"/>
+    </bean>
+
+    <bean id="numberToWordsListProcessor" class="ca.et.processing.impl.EnglishNumberToWordsListProcessor">
+        <constructor-arg name="numberValidator" ref="numberValidator"/>
+        <constructor-arg name="numberToWordsTransformer" ref="numberToWordsTransformer"/>
+    </bean>
+
+</beans>
