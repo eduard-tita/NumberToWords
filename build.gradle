@@ -15,7 +15,7 @@ dependencies {
     implementation 'org.springframework:spring-core:5.1.4.RELEASE'
     implementation 'org.springframework:spring-context:5.1.4.RELEASE'
     implementation 'org.apache.logging.log4j:log4j-core:2.11.0'
-    implementation 'org.apache.struts:struts2-core:2.1.8'
+    implementation 'org.apache.struts:struts2-core:2.1.10'
 
     testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
