@@ -15,6 +15,8 @@ dependencies {
     implementation 'org.springframework:spring-core:5.1.4.RELEASE'
     implementation 'org.springframework:spring-context:5.1.4.RELEASE'
     implementation 'org.apache.logging.log4j:log4j-core:2.11.0'
+    // vulnerable
+    implementation 'ch.qos.logback:logback-classic:1.1.0'
 
     testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
